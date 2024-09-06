@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      #- name: Checkout
+       # uses: actions/checkout@v4
 
-      - name: Install Packages
-        run: npm i
+      #- name: Install Packages
+       # run: npm i
 
       - name: Build
         env:
@@ -28,9 +28,9 @@ jobs:
           REACT_APP_FEEDBACK_URL: ${{ secrets.REACT_APP_FEEDBACK_URL }}
         run: echo $REACT_APP_SB_API_URL
 
-        run: CI=false npm run build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: build
+        #run: CI=false npm run build
+      #- name: Deploy
+      # uses: JamesIves/github-pages-deploy-action@v4
+      #with:
+      # branch: gh-pages
+      #folder: build
